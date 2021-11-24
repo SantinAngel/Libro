@@ -46,6 +46,13 @@ public class Libro {
     }
     
     /**
+     * Devuelve los detalles 
+     */
+    public String getDetalles(){
+        return "Titulo:"+ titulo + "|Autor:" + autor + "|Páginas:" + numeroPaginas;
+    }
+    
+    /**
      * Imprimir autor
      */
     public void imprimirAutor(){
@@ -57,5 +64,13 @@ public class Libro {
      */ 
     public void imprimirTitulo(){
         System.out.println(titulo);
+    }
+    
+    /**
+     * Imprimir detalles
+     */
+    public void imprimirDetalles(){
+        System.out.println("Titulo:"+ titulo + ", Autor:" + autor + ", Páginas:" + numeroPaginas);
+    
     }
 }

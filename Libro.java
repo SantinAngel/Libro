@@ -69,10 +69,10 @@ public class Libro {
     public String getDetalles(){
         String detalles;
         if(numeroReferencia!=""){
-        detalles="Titulo:"+ titulo + "|Autor:" + autor + "|Páginas:" + numeroPaginas + "Numero de referencia:" + numeroReferencia;
+        detalles="Titulo:"+ titulo + "|Autor:" + autor + "|Páginas:" + numeroPaginas + "Numero de referencia:" + numeroReferencia + "Veces prestados:" + vecesPrestado;
         }
         else{
-        detalles="Titulo:"+ titulo + "|Autor:" + autor + "|Páginas:" + numeroPaginas + "Numero de referencia:ZZZ";
+        detalles="Titulo:"+ titulo + "|Autor:" + autor + "|Páginas:" + numeroPaginas + "Numero de referencia:ZZZ" + "Veces prestados:" + vecesPrestado;
         }
         return detalles;
     }

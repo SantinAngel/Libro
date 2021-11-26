@@ -28,8 +28,18 @@ public class Libro {
         vecesPrestado = 0;
     }
     
+    /**
+     * Incrementa las veces prestadas en 1
+     */
     public void prestar(){
         vecesPrestado=vecesPrestado + 1;    
+    }
+    
+    /**
+     * Devuelve las veces prestadas
+     */
+    public int getvecesPrestado(){
+        return vecesPrestado;
     }
     
     /**

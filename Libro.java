@@ -56,7 +56,7 @@ public class Libro {
         detalles="Titulo:"+ titulo + "|Autor:" + autor + "|Páginas:" + numeroPaginas + "Numero de referencia:" + numeroReferencia;
         }
         else{
-        detalles= "ZZZ";
+        detalles="Titulo:"+ titulo + "|Autor:" + autor + "|Páginas:" + numeroPaginas + "Numero de referencia:ZZZ";
         }
         return detalles;
     }
@@ -102,7 +102,7 @@ public class Libro {
             System.out.println("Titulo:"+ titulo + ", Autor:" + autor + ", Páginas:" + numeroPaginas + "Numero de referencia:" + numeroReferencia);
         }
         else{
-            System.out.println("ZZZ");    
+            System.out.println("Titulo:"+ titulo + ", Autor:" + autor + ", Páginas:" + numeroPaginas + "Numero de referencia:ZZZ");    
         }
     }
 }

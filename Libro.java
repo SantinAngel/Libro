@@ -15,17 +15,23 @@ public class Libro {
     private int numeroPaginas;
     private String numeroReferencia;
     private int vecesPrestado;
+    private boolean esLibroDeTexto;
     
     /**
      * Fija el autor y el titulo del libro y las paginas a los dados como parametro
      */
-    public Libro(String autorLibro, String tituloLibro, int numeroDePaginas)
+    public Libro(String autorLibro, String tituloLibro, int numeroDePaginas, boolean libroDeTexto)
     {
         autor = autorLibro;
         titulo = tituloLibro;
         numeroPaginas = numeroDePaginas;
         numeroReferencia = "";
         vecesPrestado = 0;
+        esLibroDeTexto= libroDeTexto;
+    }
+    
+    public boolean getesLibroDeTexto(){
+        return esLibroDeTexto;
     }
     
     /**
@@ -67,12 +73,18 @@ public class Libro {
      * Devuelve los detalles 
      */
     public String getDetalles(){
-        String detalles;
+        String detalles = "Titulo:"+ titulo + "|Autor:" + autor + "|Páginas:" + numeroPaginas + "|Veces prestados:" + vecesPrestado;
         if(numeroReferencia!=""){
-        detalles="Titulo:"+ titulo + "|Autor:" + autor + "|Páginas:" + numeroPaginas + "Numero de referencia:" + numeroReferencia + "Veces prestados:" + vecesPrestado;
+            detalles = detalles +"Numero de referencia:" + numeroReferencia;
         }
         else{
-        detalles="Titulo:"+ titulo + "|Autor:" + autor + "|Páginas:" + numeroPaginas + "Numero de referencia:ZZZ" + "Veces prestados:" + vecesPrestado;
+            detalles = detalles + "|Numero de referencia:ZZZ";
+        }
+        if (esLibroDeTexto == true){
+            detalles = detalles + "|Libro de texto";
+        }
+        else{
+            detalles = detalles + "|No Libro de texto";
         }
         return detalles;
     }

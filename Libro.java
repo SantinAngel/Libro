@@ -126,11 +126,19 @@ public class Libro {
      * Imprimir detalles
      */
     public void imprimirDetalles(){
+        String Imprimir = "Titulo:"+ titulo + ", Autor:" + autor + ", Páginas:" + numeroPaginas + "Veces prestados:" + vecesPrestado;
         if(numeroReferencia!=""){
-            System.out.println("Titulo:"+ titulo + ", Autor:" + autor + ", Páginas:" + numeroPaginas + "Numero de referencia:" + numeroReferencia + "Veces prestados:" + vecesPrestado);
+            Imprimir = Imprimir + "Numero de referencia:" + numeroReferencia;
         }
         else{
-            System.out.println("Titulo:"+ titulo + ", Autor:" + autor + ", Páginas:" + numeroPaginas + "Numero de referencia:ZZZ" + "Veces prestados:" + vecesPrestado);    
+            Imprimir = Imprimir + "Numero de referencia:ZZZ";
         }
+        if(esLibroDeTexto == true){
+           Imprimir = Imprimir + "|Libro de texto";
+        }
+        else{
+            Imprimir = Imprimir + "|No libro de texto";
+        }
+        System.out.println(Imprimir);
     }
 }
